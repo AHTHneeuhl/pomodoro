@@ -1,8 +1,6 @@
-export const typeDefs = `
-    type Task {
-        id: ID
-        title: String
-        description: String
-        dueDate: String
-    }
-`;
+import "./types/Link";
+import "./types/User";
+
+import { builder } from "./builder";
+
+export const schema = builder.toSchema();
