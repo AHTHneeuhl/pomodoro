@@ -5,7 +5,9 @@ builder.prismaObject("Task", {
     id: t.exposeID("id"),
     title: t.exposeString("title"),
     description: t.exposeString("description"),
-    dueDate: t.exposeString("dueDate"),
+    dueDate: t.expose("dueDate", {
+      type: "Date",
+    }),
   }),
 });
 
@@ -33,5 +35,13 @@ builder.mutationField("createTask", (t) =>
         },
       });
     },
+  })
+);
+
+builder.queryField("tasks", (t) =>
+  t.prismaField({
+    type: ["Task"],
+    resolve: (query, _parent, _args, _ctx, _info) =>
+      prisma.task.findMany({ ...query }),
   })
 );

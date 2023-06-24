@@ -1,5 +1,7 @@
-import { Grommet } from "grommet";
+import apolloClient from "@/lib/apollo";
+import { ApolloProvider } from "@apollo/client";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { Grommet } from "grommet";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <UserProvider>
-          <Grommet>{children}</Grommet>
-        </UserProvider>
+        <ApolloProvider client={apolloClient}>
+          <UserProvider>
+            <Grommet>{children}</Grommet>
+          </UserProvider>
+        </ApolloProvider>
       </body>
     </html>
   );
