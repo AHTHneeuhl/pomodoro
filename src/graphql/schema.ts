@@ -1,4 +1,4 @@
-import "./types/Link";
+import "./types/Task";
 import "./types/User";
 
 import { builder } from "./builder";
