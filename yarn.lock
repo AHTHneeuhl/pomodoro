@@ -1412,11 +1412,6 @@
   dependencies:
     "@prisma/generator-helper" "^4.11.0"
 
-"@pothos/plugin-relay@^3.43.0":
-  version "3.43.0"
-  resolved "https://registry.yarnpkg.com/@pothos/plugin-relay/-/plugin-relay-3.43.0.tgz#13929f9ff77386662b7b17364a4be9cb9a17801d"
-  integrity sha512-435jODSgj29IRgHlQjfLUoaTcg1FodqkOaNA0T0IZmjgmS8+2GxqYscRrZWQU7Ufr1MLRvGXOQ+14ri2jw5geQ==
-
 "@prisma/client@^4.15.0":
   version "4.16.0"
   resolved "https://registry.yarnpkg.com/@prisma/client/-/client-4.16.0.tgz#1526414d69bb0db5efff0c8b0b99db65b11c6da4"
